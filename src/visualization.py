@@ -3,14 +3,13 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as anim
 
 class visualization:
-    def __init__(self, l1, l2, q):
+    def __init__(self, l1, l2, q, ax):
         '''
         '''
         self.l1 = l1
         self.l2 = l2
         self.q = q
-        self.fig = plt.figure()
-        self.ax = self.fig.add_subplot(1,1,1)
+        self.ax = ax
         print("Visulization functionality initiated.")
     
     def plot(self, q):

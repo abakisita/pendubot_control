@@ -10,8 +10,8 @@ class pendubot_dynamic_system:
         lc2 = l2/2
 
         # Inertia of the links of pendubot 
-        i1 = m1*l1**2 / 3
-        i2 = m2*l2**2 / 3
+        i1 = m1*l1**2 / 12
+        i2 = m2*l2**2 / 12
 
         # Gravitaional acceleartion
         self.g = 9.8
