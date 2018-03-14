@@ -51,7 +51,7 @@ class pendubot_dynamic_system:
         g = np.array([[self.p4*self.g*np.cos(self.q1) + self.p5*self.g*np.cos(self.q1 + self.q2)],
                     [self.p5*self.g*np.cos(self.q1 + self.q2)]])
 
-        self.ddq = np.linalg.pinv(m).dot(np.array([[tau],[0.0]]) - c.dot(self.dq) - g)
+        self.ddq = np.linalg.pinv(m).dot(np.array([[0.0],[0.0]]) - c.dot(self.dq) - g)
         self.dq = self.dq + self.ddq * time_step
         self.q = self.q + self.dq * time_step
         return self.ddq, self.dq, self.q

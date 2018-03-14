@@ -17,8 +17,8 @@ class simulation:
         l2 = 1.0
         self.l1 = l1
         self.l2 = l2
-        q1 = np.pi/4
-        q2 = np.pi/6
+        q1 = 3*np.pi/2
+        q2 = np.pi/8
         initial_state = np.array([[q1],
                                 [q2]])
         self.start_time = time.time()
