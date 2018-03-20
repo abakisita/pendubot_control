@@ -17,8 +17,8 @@ class simulation:
         l2 = 1.0
         self.l1 = l1
         self.l2 = l2
-        q1 = 3*np.pi/2
-        q2 = np.pi/8
+        q1 = 3*np.pi/2 + np.pi/4
+        q2 = 0.0
         initial_state = np.array([[q1],
                                 [q2]])
         self.start_time = time.time()
@@ -28,10 +28,10 @@ class simulation:
         self.ax = self.fig.add_subplot(1,1,1)
 
     def plot(self, q):
-        for i in range(0,20):
+        for i in range(0,30):
             q = self.run()
         th1 = q[0,0] 
-        th2 = q[1,0]
+        th2 = q[1,0] - th1
         x1 = np.cos(th1) * self.l1
         y1 = np.sin(th1) * self.l1
         x2 = x1 + np.cos(th1 + th2) * self.l2
